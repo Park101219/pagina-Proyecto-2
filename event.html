@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Teatro Events/Shows Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#cc0000",
+              "background-light": "#f8f5f5",
+              "background-dark": "#1a1613",
+              "accent-1": "#790000",
+              "accent-2": "#4b2020",
+              "text-accent": "#ce8d8d",
+              "accent-yellow": "#ffde59",
+              "accent-orange": "#ffa520"
+            },
+            fontFamily: {
+              "display": ["Spline Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 sm:px-10 md:px-20 lg:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-accent-2 px-4 sm:px-10 py-3">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">Teatro</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end items-center gap-8">
+<div class="flex items-center gap-9">
+<a class="text-white/70 hover:text-white text-sm font-medium leading-normal" href="#">Home</a>
+<a class="text-white text-sm font-bold leading-normal" href="#">Events/Shows</a>
+<a class="text-white/70 hover:text-white text-sm font-medium leading-normal" href="#">About Us</a>
+<a class="text-white/70 hover:text-white text-sm font-medium leading-normal" href="#">Contact</a>
+</div>
+<a class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-accent-yellow text-background-dark text-sm font-bold leading-normal tracking-[0.015em] hover:bg-accent-orange transition-colors" href="#">
+<span class="truncate">Buy Tickets</span>
+</a>
+</div>
+<button class="md:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<main class="flex-1">
+<div class="flex flex-wrap justify-between gap-4 p-4 sm:p-6 md:p-8">
+<h1 class="text-white text-4xl sm:text-5xl font-black leading-tight tracking-[-0.033em] min-w-72">Current &amp; Upcoming Performances</h1>
+</div>
+<div class="flex gap-3 p-3 sm:p-4 overflow-x-auto">
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-accent-2 hover:bg-accent-1 pl-4 pr-2 transition-colors">
+<p class="text-white text-sm font-medium leading-normal">This Month</p>
+<span class="material-symbols-outlined text-white text-base">expand_more</span>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-accent-2 hover:bg-accent-1 pl-4 pr-2 transition-colors">
+<p class="text-white text-sm font-medium leading-normal">Coming Soon</p>
+<span class="material-symbols-outlined text-white text-base">expand_more</span>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-accent-2 hover:bg-accent-1 pl-4 pr-2 transition-colors">
+<p class="text-white text-sm font-medium leading-normal">By Genre</p>
+<span class="material-symbols-outlined text-white text-base">expand_more</span>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-accent-2 hover:bg-accent-1 pl-4 pr-2 transition-colors">
+<p class="text-white text-sm font-medium leading-normal">By Date</p>
+<span class="material-symbols-outlined text-white text-base">expand_more</span>
+</button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+<div class="flex flex-col gap-3 rounded-lg overflow-hidden bg-accent-2/30">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover" data-alt="A dramatic scene from Hamlet featuring the main character holding a skull." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCE5oSC_Up1EDiHJCaMEejzsdd2NLqqvpY92HFxxKqC_BaomYEOveI0l22MntvpklWllvNMofbMb1xE5htRgXxjFXHz_JjdTThQ1elr5fYSY9lLxTCDIhhNcTGsUZb6rPwL60DJ2qL_OsG4Fj41zxYUhGbo_v20qN6pOEP9B-LH9oBrrxaYbIFdg2xWHSI48DDmscpjXQkJ66iobxWnh10A6X7nyNLADoFbGyYOMKtvsw6jRgvY8bViN8xecDJFDSF94bxAQ1Qa1pUa");'></div>
+<div class="p-4 flex flex-col flex-grow">
+<h3 class="text-white text-lg font-bold leading-normal">Hamlet</h3>
+<p class="text-text-accent text-sm font-normal leading-normal">October 25th, 2024 | 7:30 PM</p>
+<p class="text-text-accent text-sm font-normal leading-normal mt-2">A timeless tragedy of revenge, madness, and moral corruption.</p>
+<div class="mt-auto pt-4">
+<button class="w-full flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-red-700 transition-colors">
+<span class="truncate">Book Tickets</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-3 rounded-lg overflow-hidden bg-accent-2/30">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover" data-alt="Performers in colorful costumes dancing on a brightly lit stage during a musical." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDNN0lmr9p9vWbCBgYe_daS3jaCYaaClfRquls5HB7Xi4TyqkSFoMWd3xfJtdHEY5cy1DC7xp6qNaXFXrUxuC877Th5jGjCyeniwMBeaaXzk10Fr5C10Dn3g4cwloAjjhfO1UV0CIvrvCTG2Lvuo1xUIMf3SHhuw1M1DM9Sf1wZsND8QKn_MDJjjrI9o7JBcUsGFIwDj7ynpaTP3qijC8y_2WEMOb3fsq7oy8qTMdO6_XH-QUsfgTzdyGOu_9F0LMMAu7emRTSE2lxg");'></div>
+<div class="p-4 flex flex-col flex-grow">
+<h3 class="text-white text-lg font-bold leading-normal">The Grand Musical</h3>
+<p class="text-text-accent text-sm font-normal leading-normal">November 12th, 2024 | 8:00 PM</p>
+<p class="text-text-accent text-sm font-normal leading-normal mt-2">A spectacular journey of song and dance that will leave you breathless.</p>
+<div class="mt-auto pt-4">
+<button class="w-full flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-red-700 transition-colors">
+<span class="truncate">Book Tickets</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-3 rounded-lg overflow-hidden bg-accent-2/30">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover" data-alt="A snowy, magical forest scene with actors on stage for A Winter's Tale." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCflOBQt64wpMB4wVTgxhlYekrzu6mLwI-ucr0f7NdSPipUNyex3KTy47w71Dy3Z5UHNVNLG_lh-yVqMKFk-eZ5UTZUT9XCZOPb3XwRY4dniVMTpLrzRKvh0e5wd37vKBnuRegCy3FzLBUGFoq2f-KnJ0v4a8WLfnJNdffhoF5_cG0VZ5pHUB4DNWncvOvwGpa4xywJw6R7Agt472SYIfHqMZ7rNTHYIuNjueVLzgCI-uZpj6AhlhMLOjqKZxZt5VSSrGqTXyqZdYaS");'></div>
+<div class="p-4 flex flex-col flex-grow">
+<h3 class="text-white text-lg font-bold leading-normal">A Winter's Tale</h3>
+<p class="text-text-accent text-sm font-normal leading-normal">December 5th, 2024 | 7:30 PM</p>
+<p class="text-text-accent text-sm font-normal leading-normal mt-2">A captivating story of loss and redemption in a world of jealousy and joy.</p>
+<div class="mt-auto pt-4">
+<button class="w-full flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-red-700 transition-colors">
+<span class="truncate">Book Tickets</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-3 rounded-lg overflow-hidden bg-accent-2/30">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover" data-alt="A solo dancer in mid-air, captured in a dynamic pose against a dark background." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCX79znwgZ8sOGHwte_T3eHfwzlB4n6NO27cwZMIRSmw3_V9KAO24wjAUnvYvZPoCT1MVZEVjps-Tl72hv3JLRMoU_6uGCzDmfFxLjid8frs-VE20pbF_UUrJTpgEH11QCeeiG4QNE7jaouvXHt8uNjajHpUNDO5STMwJiQpiSEiKCIT2EIWk9zVu7_6sFspzFXSH6k56PrNSElmQ6w-j76AM1x7-4z8OOp6pKAiwOszsqfXaPdw_i09902gFRlI_nHW8_mmLm_Hhgj");'></div>
+<div class="p-4 flex flex-col flex-grow">
+<h3 class="text-white text-lg font-bold leading-normal">Modern Dance Showcase</h3>
+<p class="text-text-accent text-sm font-normal leading-normal">January 15th, 2025 | 8:00 PM</p>
+<p class="text-text-accent text-sm font-normal leading-normal mt-2">An electrifying performance pushing the boundaries of contemporary dance.</p>
+<div class="mt-auto pt-4">
+<button class="w-full flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-red-700 transition-colors">
+<span class="truncate">Book Tickets</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-3 rounded-lg overflow-hidden bg-accent-2/30">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover" data-alt="Two comedians on stage with microphones, one telling a joke and the other laughing." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA6w0l8uMf1JhMcuXRQ1-JvORKWAYrXskOxF8oAv5EevO5PhZARWf9GcIOYVmt9wLmGAQKnxREUkgr0NOvSZc8uecGHgG5PFRc91gS_uaqlc3Z3ruoLCZbHqt8iSXBMx1WLv_HmuqUGeP0BPJXHYEEmB9T3rHKtGK-VBClkxxZQngd_bo7enSFAYCxjpOhPNYMQ8vLXfU1drTAxEhYH1K0ERggoih7SXPFwi5tgAamHRC7lqyfUglNqFep_Hr5yKXkZwdbR4nG9WWtK");'></div>
+<div class="p-4 flex flex-col flex-grow">
+<h3 class="text-white text-lg font-bold leading-normal">An Evening of Comedy</h3>
+<p class="text-text-accent text-sm font-normal leading-normal">February 2nd, 2025 | 8:30 PM</p>
+<p class="text-text-accent text-sm font-normal leading-normal mt-2">Laugh out loud with a lineup of the city's best stand-up comedians.</p>
+<div class="mt-auto pt-4">
+<button class="w-full flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-red-700 transition-colors">
+<span class="truncate">Book Tickets</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-3 rounded-lg overflow-hidden bg-accent-2/30">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover" data-alt="A soprano singer in an elegant gown performing an opera aria on a grand stage." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBMApbLMUwJypRtslfRgOW1MVMTh6BYW7ShIRQgjU6C52NoWo1C1nXsLZg29JMqWaDFCpLqP3gbLRQDI8NcHfygQ11st7Vr5DcKTW18tXfXackjtG4hYLh9-snO-YaTh565CjwVb6CuVjjch8rAV-WihHBDD7A7j6BWQf034U-agu6aojDgirIwzojIc97PL9aa0WqTfJpJhfF_r94ahM7m-Qsmyj2ZvoHdimhAVGa2spXUp8hurKAmqaDmlONduWrt_M2vTnw5_tGN");'></div>
+<div class="p-4 flex flex-col flex-grow">
+<h3 class="text-white text-lg font-bold leading-normal">Opera Night: La Traviata</h3>
+<p class="text-text-accent text-sm font-normal leading-normal">March 20th, 2025 | 7:00 PM</p>
+<p class="text-text-accent text-sm font-normal leading-normal mt-2">Experience the passion and tragedy of Verdi's masterpiece.</p>
+<div class="mt-auto pt-4">
+<button class="w-full flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-red-700 transition-colors">
+<span class="truncate">Book Tickets</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>
